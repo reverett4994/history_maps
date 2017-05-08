@@ -1,0 +1,79 @@
+<html>
+<head>
+  <script>
+      window.scribblemaps = {
+        settings:
+          {
+            "baseAPI": "google",
+            "key": "AIzaSyBJgeowk3g32-4-6FFHj6Ds4DLZ6MxR4X8"
+          }
+      }
+  </script>
+  <script src="//scribblemaps.com/api/js/"></script>
+</head>
+
+
+
+
+
+<body>
+  <h1>A MAP</h1>
+  <select>
+   <option value="2000bc">2000 BC</option>
+   <option value="500bc">500 BC</option>
+ </select>
+ <div id="ScribbleMap"></div>
+    1000bc: https://upload.wikimedia.org/wikipedia/commons/d/dd/World_2000_BC.svg<br>
+    500bc:http://www.worldhistorymaps.info/images/East-Hem_500bc.jpg, https://upload.wikimedia.org/wikipedia/commons/a/a0/World_500_BCE.png, http://www.timemaps.com/history/europe-500bc/, http://www.timemaps.com/history/africa-500bc/
+</body>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var sm;
+    window.onload = function () {
+        sm = new ScribbleMap("ScribbleMap");
+
+        sm.ui.setAvailableTools(["drag"]);
+            sm.map.addListener(scribblemaps.MapEvent.MAP_LOADED, function (event) {
+            });
+
+            sm.map.addListener(scribblemaps.MapEvent.MAP_LOAD_ERROR, function (event) {
+            });
+            var details = {
+                "id": "ryan_2000bc",
+                "baseAPI": "google",
+                "key": "AIzaSyBJgeowk3g32-4-6FFHj6Ds4DLZ6MxR4X8"
+            };
+
+            sm.map.load(details, function (data) {
+            }, function (errorEvent) { }, false);
+    };
+
+    $('select').on('change', function() {
+      // alert( this.value );
+      var map=String("ryan_"+this.value)
+      $("h1").text(this.value+" map");
+      sm.ui.setAvailableTools(["drag"]);
+          sm.map.addListener(scribblemaps.MapEvent.MAP_LOADED, function (event) {
+          });
+
+          sm.map.addListener(scribblemaps.MapEvent.MAP_LOAD_ERROR, function (event) {
+          });
+          var details = {
+              "id": map,
+              "baseAPI": "google",
+              "key": "AIzaSyBJgeowk3g32-4-6FFHj6Ds4DLZ6MxR4X8"
+          };
+
+          sm.map.load(details, function (data) {
+          }, function (errorEvent) { }, false);
+
+    })
+</script>
+</html>
