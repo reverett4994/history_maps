@@ -1,0 +1,47 @@
+<ul>
+  <li><a href="/pages/map">Maps</a></li>
+  <li ><a href="/pages/compare">Compare</a></li>
+  <li class="active"><a href="/pages/about">About</a></li>
+</ul>
+<div class='background'>
+  <h1 id="about_header">App using Scribble Maps API to compare and view historical maps!</h1>
+  
+  <div id="carousel_wrapper">
+    <div class="owl-carousel">
+      <div> <%=image_tag("2000bc.png", alt: "Example Image")%> </div>
+      <div> <%=image_tag("500bc.png", alt: "Example Image")%> </div>
+    </div>
+  </div>
+  <div id="home_text">
+    <div id="picture"></div>
+    <div id="content">This is a simple app I created designed to view and compare maps that can be created though the site <a href="https://www.scribblemaps.com/">Scribble Maps</a><br>
+                      Sources<br>
+                      2000bc:<a href="https://upload.wikimedia.org/wikipedia/commons/d/dd/World_2000_BC.svg">Wikipedia</a><br>
+                      500bc:<a href="http://www.worldhistorymaps.info/images/East-Hem_500bc.jpg">worldhistorymaps</a>,
+                      <a href="https://upload.wikimedia.org/wikipedia/commons/a/a0/World_500_BCE.png">Wikipedia</a>,
+                      <a href="http://www.timemaps.com/history/europe-500bc/">timemaps</a> &
+                      <a href="http://www.timemaps.com/history/africa-500bc/">timemaps</a><br>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  // CAN CALL PLUG IN HERE!!!
+  $(".owl-carousel").owlCarousel({
+
+         navigation : true, // Show next and prev buttons
+         autoPlay : true,
+         slideSpeed : 300,
+         paginationSpeed : 400,
+         stopOnHover:true,
+         singleItem:true
+         // "singleItem:true" is a shortcut for:
+         // items : 1,
+         // itemsDesktop : false,
+         // itemsDesktopSmall : false,
+         // itemsTablet: false,
+         // itemsMobile : false
+});
+</script>

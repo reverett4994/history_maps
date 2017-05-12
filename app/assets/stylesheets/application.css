@@ -10,6 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require owl.carousel
+*= require owl.theme
  *= require_tree .
  *= require_self
  */
@@ -17,4 +19,101 @@
 #ScribbleMap{
   width: 100%;
   height: 1200px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+
+/*********************ABOUT PAGE********************/
+
+.background{
+  background-image: url('map2.jpg');
+  height: 1900px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#about_header{
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Merienda', cursive;
+  font-size: 50px;
+  margin-bottom: 50px;
+     -webkit-text-stroke: .68px white;
+}
+
+#carousel_wrapper{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+ .owl-carousel .owl-item{
+  margin: 3px;
+}
+.owl-carousel .owl-item img{
+  display: block;
+  width: 100%;
+  height: 805px;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+#home_text{
+  position:relative;
+  border: 1px solid black;
+  height: 200px;
+}
+#home_text #picture{
+  position:absolute; top:0px; right:0px; bottom:0px; left:0px;
+  background-image: url('map2.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:block;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+  height: 200px;
+  z-index: 0;
+}
+#home_text #content{
+  position:absolute; top:0px; right:0px; bottom:0px; left:0px;
+  text-align: center;
+  font-size: 28px;
+  z-index: 100;
+  padding: 10px;
+  font-family: 'Merienda', cursive;
+
 }
