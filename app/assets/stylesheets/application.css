@@ -26,6 +26,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    font-family: 'Merienda', cursive;
+
 }
 
 li {
@@ -45,10 +47,36 @@ li a:hover {
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #AA451B;
 }
 
 
+/*********************MAP PAGE********************/
+
+
+#map_title{
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Merienda', cursive;
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+#map_selection{
+  text-align: center;
+}
+#map_h2{
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Merienda', cursive;
+}
+select{
+  width: 200px;
+  font-family: 'Merienda', cursive;
+}
+/*********************MAP PAGE********************/
 
 /*********************ABOUT PAGE********************/
 
@@ -91,6 +119,7 @@ li a:hover {
   position:relative;
   border: 1px solid black;
   height: 200px;
+
 }
 #home_text #picture{
   position:absolute; top:0px; right:0px; bottom:0px; left:0px;

@@ -3,12 +3,27 @@
   <li class="active"><a href="/pages/compare">Compare</a></li>
   <li><a href="/pages/about">About</a></li>
 </ul>
-<h1>Comparison Between 2000BC and 500BC Maps </h1>
-<div id="container1">
-  <%= image_tag "2000bc.png",class:'pic' %>
-  <%= image_tag "500bc.png",class:'pic' %>
+<div class='background'>
+  <br>
+  <div id="home_text">
+    <div id="picture"></div>
+    <div id="content">
+      <h1 id="map_title">Comparison Between 2000BC and 500BC Maps </h1>
+    </div>
+  </div>
+  <br>
+  <div id="container1">
+    <%= image_tag "2000bc.png",class:'pic' %>
+    <%= image_tag "500bc.png",class:'pic' %>
+  </div>
+  <div id="home_text">
+    <div id="picture"></div>
+    <div id="content">
+       <h2 style="float:left">2000BC</h2 ><h2 style="float:right">500BC</h2>
+    </div>
+  </div>
 </div>
-<h2 style="float:left">2000BC</h2 ><h2 style="float:right">500BC</h2>
+
 <script>
 $(window).load(function() {
   $("#container1").twentytwenty();
